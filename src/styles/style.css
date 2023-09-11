@@ -1,0 +1,30 @@
+.cursor__mask {
+  transition: opacity 0.4s ease;
+}
+
+.footer__nav-link:hover,
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.cs-hero__button-wrapper:hover .cs-hero__button-underline{
+  transform: scaleX(1);
+  transition: all 0.6s ease;
+}
+
+.cs-hero__button-underline{
+  transition: all 0.6s ease;
+}
+
+.cs-grid__image-wrapper:hover,
+.cs-hero__image-wrapper:hover,
+.agence-cards__card:hover{
+  border-radius: 8rem;
+  transition: border-radius 0.6s ease;
+}
+
+.cs-grid__image-wrapper,
+.cs-hero__image-wrapper,
+.agence-cards__card{
+  transition: border-radius 0.4s ease;
+}
