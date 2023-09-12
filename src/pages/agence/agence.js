@@ -18,6 +18,25 @@ export default function agence()
             duration: 25,
         })
 
+        let cards = document.querySelectorAll('.card__wrapper')
+        cards.forEach(item => {
+            let cardTl = gsap.timeline({ paused: true, reversed: true })
+            .to(item.querySelector('.agence-team__card-wrapper'), {
+                rotationY: '180deg', 
+                duration: 1.8,
+                ease: 'Quart.easeInOut'
+            }, 0)
+            .to(item.querySelector('.card__verso'), {
+                rotationY: '0', 
+                duration: 1.8,
+                ease: 'Quart.easeInOut'
+            }, 0)
+
+            item.addEventListener('click', () => { cardTl.reversed() ? cardTl.play() : cardTl.reverse() })
+
+        })
+
+
         window.addEventListener('mousemove', (e) => {
             gsap.to('.agence-hero__image-wrapper', {
                 duration: 1,

@@ -91,7 +91,28 @@ export default function cursor()
                 cursorRotationTl.pause()
             })
         }
+
     
+        let links = document.querySelectorAll('a')
+        links.forEach(item => {
+
+            let cursorTl = gsap.timeline({ paused: true })
+            .fromTo('.cursor', {
+                scale: 1,
+            }, {
+                scale: 1.5,
+                duration: 0.4,
+                ease: 'Quart.easeInOut'
+            })
+
+            item.addEventListener('mouseenter', () => {
+                cursorTl.play()
+            })
+
+            item.addEventListener('mouseleave', () => {
+                cursorTl.reverse()
+            })
+        })
 
     })
 

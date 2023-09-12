@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.22",
-    "gsap": "file:gsap-bonus.tgz"
+    "gsap": "file:gsap-bonus.tgz",
+    "swiper": "^10.2.0"
   }
 }

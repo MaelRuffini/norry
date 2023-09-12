@@ -16,15 +16,35 @@
   transition: all 0.6s ease;
 }
 
-.cs-grid__image-wrapper:hover,
-.cs-hero__image-wrapper:hover,
-.agence-cards__card:hover{
-  border-radius: 8rem;
-  transition: border-radius 0.6s ease;
+@media(max-width: 767px){
+  .swiper-slide .swiper-image{
+    opacity: 0.6;
+    scale: 0.9;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+  }
+  
+  .swiper-slide-active .swiper-image{
+    scale: 1;
+    opacity: 1;
+    transition: all 0.4s ease;
+    border-radius: 0.5rem;
+  }
 }
 
-.cs-grid__image-wrapper,
-.cs-hero__image-wrapper,
-.agence-cards__card{
-  transition: border-radius 0.4s ease;
+@media(min-width: 768px){
+  .swiper-slide .swiper-image{
+    opacity: 0.6;
+    scale: 0.9;
+    border-radius: 2.5rem;
+    transition: all 0.4s ease;
+  }
+  
+  .swiper-slide-active .swiper-image{
+    scale: 1;
+    opacity: 1;
+    border-radius: 2.5rem;
+    transition: all 0.4s ease;
+  }
 }
+

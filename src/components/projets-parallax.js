@@ -18,22 +18,22 @@ export default function projetsParallax()
 
         let cardsProjets = gsap.utils.toArray('.home-projets__cl-item')
 
-        gsap.fromTo(cardsProjets[0],{
-            y: isDesktop ? '5rem' : 0,
-            }, {
-            y: isDesktop ? '-3rem' : 0,
-            scrollTrigger: {
-                trigger: cardsProjets[0],
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: true
-            }
-        })
+        // gsap.fromTo(cardsProjets[0],{
+        //     y: isDesktop ? '0rem' : 0,
+        //     }, {
+        //     y: isDesktop ? '-3rem' : 0,
+        //     scrollTrigger: {
+        //         trigger: cardsProjets[0],
+        //         start: 'top bottom',
+        //         end: 'bottom top',
+        //         scrub: true
+        //     }
+        // })
 
         gsap.fromTo(cardsProjets[1],{
             y: isDesktop ? '3rem' : 0,
         },{
-            y: isDesktop ? '-12rem' : 0,
+            y: isDesktop ? '-7rem' : 0,
             scrollTrigger: {
                 trigger: cardsProjets[1],
                 start: 'top bottom',
@@ -45,7 +45,7 @@ export default function projetsParallax()
         gsap.fromTo(cardsProjets[2],{
             y: isDesktop ? '3rem' : 0,
         }, {
-            y: isDesktop ? '-8rem' : 0,
+            y: isDesktop ? '-6rem' : 0,
             scrollTrigger: {
                 trigger: cardsProjets[2],
                 start: 'top bottom',
@@ -57,7 +57,7 @@ export default function projetsParallax()
         gsap.fromTo(cardsProjets[3],{
             y: isDesktop ? '2rem' : 0,
         },  {
-            y: isDesktop ? '-15rem' : 0,
+            y: isDesktop ? '-12rem' : 0,
             scrollTrigger: {
                 trigger: cardsProjets[3],
                 start: 'top bottom',
@@ -79,7 +79,7 @@ export default function projetsParallax()
         gsap.fromTo(cardsProjets[5],{
             y: isDesktop ? '1rem' : 0,
         }, {
-            y: isDesktop ? '-12rem' : 0,
+            y: isDesktop ? '-10rem' : 0,
             scrollTrigger: {
                 trigger: cardsProjets[5],
                 start: 'top bottom',

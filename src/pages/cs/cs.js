@@ -16,6 +16,21 @@ export default function cs() {
     (context) => {
       let { isDesktop, isMobile } = context.conditions
 
+      let csLoadingTl = gsap.timeline()
+        .from('.cs-hero__col', {
+            opacity: 0,
+            y: '3rem',
+            duration: 1,
+            ease: 'Quart.easeInOut',
+            stagger: 0.1,
+        }, 0)
+        .from('.cs-hero__image-wrapper', {
+            opacity: 0,
+            y: '3rem',
+            duration: 1,
+            ease: 'Quart.easeInOut',
+        }, 0.5)
+
       let csImageWrapper = document.querySelectorAll('.cs-grid__image-wrapper')
       csImageWrapper.forEach(item => {
 
@@ -51,6 +66,28 @@ export default function cs() {
             }
         })
       })
+
+      gsap.from('.cs-grid__swiper-wrapper', {
+        scale: isDesktop ?  0.5 : 1,
+        duration: 1,
+        ease: 'Quart.easeOut',
+        scrollTrigger: {
+            trigger: '.cs-grid__swiper-wrapper',
+            start: 'top bottom',
+            toggleActions: 'play none none reverse'
+        }
+    })
+
+    gsap.from('.swiper', {
+        scale: isDesktop ? 1.5 : 1,
+        duration: 1,
+        ease: 'Quart.easeOut',
+        scrollTrigger: {
+            trigger: '.cs-grid__swiper-wrapper',
+            start: 'top bottom',
+            toggleActions: 'play none none reverse'
+        }
+    })
 
       gsap.from('.cs-outis__wrapper', {
         opacity: isDesktop ? 0 : 1,

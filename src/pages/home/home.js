@@ -18,21 +18,21 @@ export default function home()
             duration: 1,
             ease: 'Quart.easeInOut',
             stagger: 0.1,
-            delay: 2.8
+            delay: 0.8
         }, 0)
         .from('.home-hero__logo', {
             opacity: 0,
             y: '2rem',
             duration: 0.6,
             ease: 'Quart.easeInOut',
-            delay: 2.8
+            delay: 0.8
         }, 0)
         .from('.home-hero__title', {
             opacity: 0,
             y: '2rem',
             duration: 0.6,
             ease: 'Quart.easeInOut',
-            delay: 3
+            delay: 1
         }, 0)
 
         let showreel = document.querySelector('.home-showreel__video')
